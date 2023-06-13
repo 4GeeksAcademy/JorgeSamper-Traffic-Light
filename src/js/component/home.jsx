@@ -1,28 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 
-const TrafficLight = () => {
-  const [color, setColor] = useState("red");
+import  TrafficLight  from "./trafficLight.jsx";
 
-  const handleClick = (newColor) => {
-    setColor(newColor);
-  };
-
-  return (
-    <div className="traffic-light">
-      <div
-        className={`light ${color === "red" ? "active red" : "red"}`}
-        onClick={() => handleClick("red")}
-      ></div>
-      <div
-        className={`light ${color === "yellow" ? "active yellow" : "yellow"}`}
-        onClick={() => handleClick("yellow")}
-      ></div>
-      <div
-        className={`light ${color === "green" ? "active green" : "green"}`}
-        onClick={() => handleClick("green")}
-      ></div>
-    </div>
-  );
+//create your first component
+const Home = () => {
+	return <>
+    <div className="traffic.Light">
+      <TrafficLight />
+      </div>
+      </>
+	
 };
 
-export default TrafficLight;
+export default Home;
